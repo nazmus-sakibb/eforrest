@@ -4,9 +4,18 @@ import logo from '../../images/Logo.svg';
 
 const Header = () => {
     return (
-        <nav className='navbar'>
+        <header className='header'>
+            {/* logo */}
             <img src={logo} alt="" />
-        </nav>
+
+            {/* navbar */}
+            <nav className='navbar'>
+                <a href="/shop">Shop</a>
+                <a href="/orders">Orders</a>
+                <a href="/inventory">Inventory</a>
+                <a href="/about">About</a>
+            </nav>
+        </header>
     );
 };
 

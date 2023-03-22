@@ -1,5 +1,22 @@
-/* Navbar */
-.navbar {
+/* header */
+.header {
     height: 80px;
-    background-color: black;
+    background-color: #1C2B35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 140px;
+}
+
+
+/* navbar */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+.navbar a:hover {
+    color: goldenrod;
 }
