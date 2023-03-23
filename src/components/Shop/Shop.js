@@ -11,6 +11,7 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, [])
     return (
+        // shop container
         <div className='shop-container'>
             <div className="products-container">
                 {
