@@ -32,6 +32,11 @@
     border-radius: 50%;
     border: none;
     background-color: rgba(235, 87, 87, 0.3);
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: rgba(235, 87, 87, 0.4);
 }
 
 .delete-icon {
