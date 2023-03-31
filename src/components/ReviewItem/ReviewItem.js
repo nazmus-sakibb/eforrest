@@ -14,7 +14,9 @@ const ReviewItem = ({ product }) => {
                     <p><small>Price: {price}$</small></p>
                     <p><small>Quantity: {quantity}</small></p>
                 </div>
-                <div className="delete-button"></div>
+                <div className="delete-button">
+                    <button>Delete</button>
+                </div>
             </div>
         </div>
     );
