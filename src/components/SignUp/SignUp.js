@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignUp.css';
 
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+    const [error, setError] = useState(null);
+
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const confirm = form.confirm.value;
+
+        if(password.length < 6){
+            setError('Password shound be 6 characters or more');
+            return;
+        }
+
+        if(password !== confirm){
+            setError('Your password did not match!');
+            return;
+        }
+    }
+
     return (
         <div className='form-container'>
             <h2 className='form-title'>Sign Up</h2>
 
-            {/* login form */}
-            <form>
+            {/* Signup form */}
+            <form onSubmit={handleSignUp}>
                 <div className="form-control">
                     <label htmlFor="email">Email</label>
                     <input type="email" id='email' name='email' required />
@@ -25,6 +45,7 @@ const SignUp = () => {
                 <input className='button-submit' type="submit" value="Sign Up" />
             </form>
             <p><small>Already have an account? <Link to='/login'>Login</Link></small></p>
+            <p className='text-error'>{error}</p>
         </div>
     );
 };
