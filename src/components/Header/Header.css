@@ -20,3 +20,9 @@
 .navbar a:hover {
     color: goldenrod;
 }
+
+
+.btn-logout {
+    margin-left: 20px;
+    cursor: pointer;
+}
