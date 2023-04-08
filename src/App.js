@@ -8,6 +8,7 @@ import Main from './layouts/Main';
 import { productsAndCartLoader } from './loaders/productsAndCartLoader';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
+import Shipping from './components/Shipping/Shipping';
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
         {
           path: '/inventory',
           element: <Inventory />
+        },
+        {
+          path: '/shipping',
+          element: <Shipping />
         },
         {
           path: '/about',
